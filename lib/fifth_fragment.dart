@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class fifthFragment extends StatelessWidget{
+class FifthFragment extends StatelessWidget{
 
 @override
   Widget build(BuildContext context) {
-    // TODO: implement build
-    return Container(
+    return Center(
       child: Text('Fifth Fragment',
-      style: TextStyle(fontSize: 30.0),)
+      style: TextStyle(fontSize: 30.0))
       );
   }
 

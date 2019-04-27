@@ -6,6 +6,21 @@ import 'package:flutter_basic_navigation_drawer/second_fragment.dart';
 import 'package:flutter_basic_navigation_drawer/third_fragment.dart';
 
 void main() => runApp(MaterialApp(
+  debugShowCheckedModeBanner: false,
+  theme: ThemeData(
+            //Setting theme color
+            primaryColor: Colors.red,
+            //Setting button color
+            accentColor: Colors.red,
+            //Setting Text Theme
+            textTheme: TextTheme(
+              //Setting the body1 Text Color
+              body1: TextStyle(
+                color: Colors.black
+              )
+            )
+
+      ),
       home: MyApp(),
     ));
 
@@ -20,19 +35,19 @@ class MyHomePageState extends State<MyApp> {
   Widget getCurrentFragment() {
     switch (currentIndex) {
       case 1:
-        return firstFragment();
+        return FirstFragment();
         break;
       case 2:
-        return secondFragment();
+        return SecondFragment();
         break;
       case 3:
-        return thirdFragment();
+        return ThirdFragment();
         break;
       case 4:
-        return fourthFragment();
+        return FourthFragment();
         break;
       case 5:
-        return fifthFragment();
+        return FifthFragment();
         break;
     }
   }
@@ -60,19 +75,22 @@ class MyHomePageState extends State<MyApp> {
               color: Colors.red,
               //Setting the width match parent
               width: double.infinity,
-              height: 300.0,
+              height: 250.0,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
+                  SizedBox(
+                    height: 20.0,
+                  ),
                   Icon(Icons.account_circle, size: 80.0, color: Colors.white),
                   SizedBox(
-                    height: 40.0,
+                    height: 20.0,
                   ),
                   Text(
                     'Android Pillars',
                     style: TextStyle(color: Colors.white, fontSize: 30.0),
                   ),
-                  Text('AndroidPillars@gmail.com',
+                  Text('gowthamandro@gmail.com',
                       style: TextStyle(color: Colors.white, fontSize: 15.0))
                 ],
               ),
